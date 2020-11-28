@@ -1,1 +1,1 @@
-<?php if (isset($_GET['server']) || isset($_SERVER['HTTP_X_REQUESTED_WITH']) || php_sapi_name() === "cli") { unset($_REQUEST['server']); require_once("server/index.php"); } else { header('Location: client/?'.$_SERVER['QUERY_STRING']); }
+<?php if (isset($_GET['api']) || isset($_SERVER['HTTP_X_REQUESTED_WITH']) || php_sapi_name() === "cli") { unset($_REQUEST['api']); require_once("api/index.php"); } else { header('Location: app/?'.$_SERVER['QUERY_STRING']); }

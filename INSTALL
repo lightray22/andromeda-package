@@ -1,0 +1,6 @@
+#!/bin/sh
+git clone https://github.com/lightray22/andromeda-server-framework.git api
+git clone https://github.com/lightray22/andromeda-accounts-app.git api/apps/accounts
+git clone https://github.com/lightray22/andromeda-files-app.git api/apps/files
+
+cd api; for i in . apps/accounts apps/files; do cd $i; composer install; done
